@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#07152b">
+  <title>FOX Through the Years</title>
+  <meta name="description" content="A live-style FOX channel spanning 1987 to now: early cult comedies, vintage animation, dramas, reality hits and current FOX programming.">
+  <link rel="canonical" href="https://www-infinity4.github.io/FOX/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="FOX Through the Years">
+  <meta property="og:title" content="FOX Through the Years — 1987 to Now">
+  <meta property="og:description" content="Vintage FOX meets current FOX: Simpsons across eras, Herman's Head, Get a Life, X-Files, animation, drama, reality and more in one live-style channel.">
+  <meta property="og:url" content="https://www-infinity4.github.io/FOX/">
+  <meta property="og:image" content="https://www-infinity4.github.io/FOX/assets/channel-share.png?v=20260912a">
+  <meta property="og:image:url" content="https://www-infinity4.github.io/FOX/assets/channel-share.png?v=20260912a">
+  <meta property="og:image:secure_url" content="https://www-infinity4.github.io/FOX/assets/channel-share.png?v=20260912a">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FOX Through the Years channel preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FOX Through the Years — 1987 to Now">
+  <meta name="twitter:description" content="A live-style trip through FOX television history, with vintage and current programming mixed together.">
+  <meta name="twitter:url" content="https://www-infinity4.github.io/FOX/">
+  <meta name="twitter:image" content="https://www-infinity4.github.io/FOX/assets/channel-share.png?v=20260912a">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="--program-hue:215;--program-art:url('assets/channel-share.png')">
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="FOX Through the Years home"><span class="brand-mark" aria-hidden="true">F</span><span>FOX</span></a>
+    <details class="channel-menu">
+      <summary aria-label="Open channel menu"><span aria-hidden="true">☰</span><span class="menu-label">Channels</span></summary>
+      <nav aria-label="Switch channels">
+        <a href="https://www-infinity4.github.io/Hermit-TV/">Hermit TV</a>
+        <a href="https://www-infinity4.github.io/Star-Launcher/">Star Launcher</a>
+        <a href="https://www-infinity4.github.io/HBO/">HBO</a>
+        <a href="https://www-infinity4.github.io/Cinemax/">Cinemax</a>
+        <a href="https://www-infinity4.github.io/Showtime/">Showtime</a>
+        <a href="https://www-infinity4.github.io/Starz/">Starz</a>
+        <a href="https://www-infinity4.github.io/Encore/">Encore</a>
+        <a href="https://www-infinity4.github.io/Cartoon-Network/">Cartoon Network</a>
+        <a href="https://www-infinity4.github.io/WGN/">WGN</a>
+        <a href="https://www-infinity4.github.io/NBC/">NBC</a>
+        <a aria-current="page" href="https://www-infinity4.github.io/FOX/">FOX</a>
+        <a href="https://www-infinity4.github.io/TNT/">TNT</a>
+        <a href="https://www-infinity4.github.io/TV-Database/">StarQuest</a>
+      </nav>
+    </details>
+    <div class="on-air"><span></span> ON AIR</div>
+    <time id="stationClock">--:-- -- local</time>
+  </header>
+
+  <main id="top">
+    <section class="theater" aria-labelledby="nowTitle">
+      <div class="marquee"><div><p id="modeLabel">LIVE FOX</p><h1 id="nowTitle">Loading today’s FOX program…</h1></div><div class="program-time" id="programTime">Please wait</div></div>
+      <div class="screen-shell">
+        <div class="screen-glow" aria-hidden="true"></div>
+        <div id="player" class="player" aria-label="FOX Through the Years player"></div>
+        <div id="stationCard" class="station-card" hidden>
+          <p id="stationCardLabel">FOX · THROUGH THE YEARS</p>
+          <strong id="stationCardTitle">Station break</strong>
+          <span id="stationCardCountdown"></span>
+          <a id="stationWatch" class="station-watch" href="#" target="_blank" rel="noopener" hidden>Open available source ↗</a>
+        </div>
+        <button id="enterButton" class="enter-button" type="button"><span>Enter FOX</span><small>Join the program at the moment airing now</small></button>
+      </div>
+      <div class="controls" aria-label="Playback controls">
+        <button id="startOverButton" type="button">Start over</button>
+        <button id="rewindButton" type="button">Rewind 30 sec</button>
+        <button id="liveButton" class="live-button" type="button"><span></span> Join live</button>
+        <button id="shareButton" class="share-button" type="button">Share · +1/10 ⭐</button>
+        <span id="shareStatus" class="share-status" role="status" aria-live="polite"></span>
+      </div>
+      <div class="progress-wrap"><div class="progress-meta"><span id="positionLabel">Station clock</span><span id="remainingLabel">-- remaining</span></div><div class="progress-track"><div id="progressBar"></div></div></div>
+    </section>
+
+    <section class="era-strip" aria-label="FOX programming eras">
+      <span>FOX THROUGH THE YEARS</span><strong>1987 Launch Era</strong><i>•</i><strong>1990s Cult FOX</strong><i>•</i><strong>2000s Hits</strong><i>•</i><strong>Animation Domination</strong><i>•</i><strong>Current FOX</strong>
+      <small>Vintage Simpsons is deliberately followed by a newer Simpsons selection throughout the day.</small>
+    </section>
+
+    <section class="next-up" aria-labelledby="nextHeading"><div class="section-heading"><p>1987 → NOW · ONE SHARED MOMENT</p><h2 id="nextHeading">Next on FOX</h2></div><div id="nextCards" class="next-grid"></div></section>
+
+    <section class="guide" aria-labelledby="guideHeading">
+      <div class="section-heading guide-heading"><div><p>TODAY · NEW LINEUP AT 12:00 AM VIEWER LOCAL TIME</p><h2 id="guideHeading">FOX TV guide</h2></div><span id="guideDate"></span></div>
+      <div id="guideRows" class="guide-rows"></div>
+    </section>
+  </main>
+
+  <section class="phi-web-search" aria-labelledby="phiWebSearchHeading"><div><p>INFINITY PHI</p><h2 id="phiWebSearchHeading">Search the web</h2></div><form action="https://www-infinity4.github.io/C13b0/phi" method="get"><input name="q" type="search" placeholder="Search the web" aria-label="Search the web with Infinity Phi" required><input name="run" type="hidden" value="1"><button type="submit">Search φ</button></form></section>
+
+  <section class="channel-directory" aria-labelledby="channelDirectoryHeading"><p id="channelDirectoryHeading">Choose another channel</p><nav aria-label="All channels">
+    <a href="https://www-infinity4.github.io/Hermit-TV/">Hermit TV</a><a href="https://www-infinity4.github.io/Star-Launcher/">Star Launcher</a><a href="https://www-infinity4.github.io/HBO/">HBO</a><a href="https://www-infinity4.github.io/Cinemax/">Cinemax</a><a href="https://www-infinity4.github.io/Showtime/">Showtime</a><a href="https://www-infinity4.github.io/Starz/">Starz</a><a href="https://www-infinity4.github.io/Encore/">Encore</a><a href="https://www-infinity4.github.io/Cartoon-Network/">Cartoon Network</a><a href="https://www-infinity4.github.io/WGN/">WGN</a><a href="https://www-infinity4.github.io/NBC/">NBC</a><a aria-current="page" href="https://www-infinity4.github.io/FOX/">FOX</a><a href="https://www-infinity4.github.io/TNT/">TNT</a><a href="https://www-infinity4.github.io/TV-Database/">StarQuest</a>
+  </nav></section>
+
+  <footer><span>FOX · THROUGH THE YEARS</span><p>Unofficial fan-built channel interface. Inline public sources play when available; otherwise a source button opens the available program page.</p></footer>
+  <script src="data/catalog.js"></script>
+  <script src="engine.js"></script>
+  <script src="https://www-infinity4.github.io/TNT/channels.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
