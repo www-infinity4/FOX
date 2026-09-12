@@ -43,6 +43,14 @@ window.FOX_PROGRAMS={
   beatShazam:{id:"FOX-BS",title:"Beat Shazam",year:2026,era:"Current FOX",collection:"FOX Music Game Show",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000912VCNY/beat-shazam"}
 };
 
+// Every historical listing gets a real destination even when no lawful inline
+// embed is available. Current titles open their specific FOX page above; older
+// titles fall back to the FOX network catalog instead of becoming dead cards.
+window.FOX_SOURCE_FALLBACK="https://www.fox.com/hub/network/NWK-094354f7eaa55a5fb570aa8bdf1e1839/fox";
+Object.values(window.FOX_PROGRAMS).forEach(function(program){
+  if(!program.watchUrl) program.watchUrl=window.FOX_SOURCE_FALLBACK;
+});
+
 // Every viewer gets a stable lineup for their local calendar day. At local midnight a fresh deterministic mix is selected.
 // Vintage Simpsons is deliberately followed by a current-era Simpsons slot in four different parts of the day.
 window.FOX_DAY_TEMPLATE=[
