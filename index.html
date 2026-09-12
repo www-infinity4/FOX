@@ -27,6 +27,7 @@
   <meta name="twitter:url" content="https://www-infinity4.github.io/FOX/">
   <meta name="twitter:image" content="https://www-infinity4.github.io/FOX/assets/channel-share.svg?v=20260912b">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www-infinity4.github.io/Cosmo/cosmo.css?v=0.1.0">
 </head>
 <body style="--program-hue:215;--program-art:url('assets/channel-share.svg')">
   <header class="masthead">
@@ -90,6 +91,9 @@
     </section>
   </main>
 
+  <button id="cosmoOpen" class="cosmo-open" type="button" aria-label="Open Cosmo watch companion">Cosmo</button>
+  <aside id="cosmo" hidden></aside>
+
   <section class="phi-web-search" aria-labelledby="phiWebSearchHeading"><div><p>INFINITY PHI</p><h2 id="phiWebSearchHeading">Search the web</h2></div><form action="https://www-infinity4.github.io/C13b0/phi" method="get"><input name="q" type="search" placeholder="Search the web" aria-label="Search the web with Infinity Phi" required><input name="run" type="hidden" value="1"><button type="submit">Search φ</button></form></section>
 
   <section class="channel-directory" aria-labelledby="channelDirectoryHeading"><p id="channelDirectoryHeading">Choose another channel</p><nav aria-label="All channels">
@@ -101,5 +105,7 @@
   <script src="engine.js"></script>
   <script src="https://www-infinity4.github.io/TNT/channels.js"></script>
   <script src="app.js"></script>
+  <script src="https://www-infinity4.github.io/Cosmo/cosmo.js?v=0.1.0"></script>
+  <script src="fox-cosmo.js"></script>
 </body>
 </html>
