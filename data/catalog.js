@@ -92,4 +92,24 @@ window.FOX_DAY_TEMPLATE=[
   {minute:1380,duration:60,choices:["xfiles","house","bones","loneStar"]}
 ];
 
+/*
+ * Broadcast rule: only schedule sources that can play inside the channel.
+ * Catalog-only titles remain available for future verified hookups, but never
+ * occupy airtime or produce an empty player/source slate.
+ */
+window.FOX_INLINE_KEYS=Object.keys(window.FOX_PROGRAMS).filter(function(key){
+  const item=window.FOX_PROGRAMS[key];
+  return key!=="bobs"&&!!(item.videoId&&item.cleared);
+});
+window.FOX_DAY_TEMPLATE=window.FOX_DAY_TEMPLATE.map(function(slot,index){
+  const verified=slot.choices.filter(function(key){return window.FOX_INLINE_KEYS.indexOf(key)!==-1;});
+  if(verified.length)return Object.assign({},slot,{choices:verified});
+  const first=(index*2)%window.FOX_INLINE_KEYS.length;
+  return Object.assign({},slot,{choices:[
+    window.FOX_INLINE_KEYS[first],
+    window.FOX_INLINE_KEYS[(first+1)%window.FOX_INLINE_KEYS.length],
+    window.FOX_INLINE_KEYS[(first+2)%window.FOX_INLINE_KEYS.length]
+  ]});
+});
+
 window.INFINITY_CHANNEL={id:"FOX",era:"1987 to now",reset:"12:00 AM viewer local time",feature:"Vintage Simpsons followed by current Simpsons"};
