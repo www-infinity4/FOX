@@ -21,7 +21,7 @@
     const runtime=Math.min(block.movie.runtimeSeconds||block.blockSeconds,block.blockSeconds);const segments=[];
     if(block.movie.videoId&&block.movie.cleared){segments.push({kind:"program",title:block.movie.title,videoId:block.movie.videoId,watchUrl:block.movie.watchUrl||"",cleared:true,sourceStart:0,stationStart:0,duration:runtime});}
     else{segments.push({kind:"station",title:block.movie.title,videoId:"",watchUrl:block.movie.watchUrl||"",cleared:false,sourceStart:0,stationStart:0,duration:Math.min(runtime,block.blockSeconds)});}
-    if(runtime<block.blockSeconds){segments.push({kind:"station",title:"FOX station break · next program soon",videoId:"",watchUrl:"",cleared:true,sourceStart:0,stationStart:runtime,duration:block.blockSeconds-runtime});}
+    if(runtime<block.blockSeconds&&block.movie.videoId&&block.movie.cleared){segments.push({kind:"program",title:block.movie.title,videoId:block.movie.videoId,watchUrl:block.movie.watchUrl||"",cleared:true,sourceStart:0,stationStart:runtime,duration:block.blockSeconds-runtime});}
     return segments;
   }
   function resolve(nowMs,schedule){
