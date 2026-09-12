@@ -8,10 +8,10 @@
   function buildSchedule(nowMs){
     const built=engine.createDaySchedule(nowMs,programs,template);
     return built.map((block,index)=>{
-      if((block.movie.videoId&&block.movie.cleared&&!failedVideoIds.has(block.movie.videoId))||block.movie.watchUrl)return block;
+      if(block.movie.videoId&&block.movie.cleared&&!failedVideoIds.has(block.movie.videoId))return block;
       const choices=(template[index]&&template[index].choices)||[];
-      const fallbackKey=choices.find(key=>{const item=programs[key];return item&&((item.videoId&&item.cleared&&!failedVideoIds.has(item.videoId))||item.watchUrl);});
-      return fallbackKey?{...block,movie:programs[fallbackKey]}:block;
+      const fallbackKey=choices.find(key=>{const item=programs[key];return item&&item.videoId&&item.cleared&&!failedVideoIds.has(item.videoId);});
+      const networkFallback=(window.FOX_INLINE_KEYS||[]).find(key=>{const item=programs[key];return item&&item.videoId&&item.cleared&&!failedVideoIds.has(item.videoId);});return fallbackKey||networkFallback?{...block,movie:programs[fallbackKey||networkFallback]}:block;
     });
   }
   function ensureSchedule(nowMs){const key=engine.dateKey(nowMs);if(key!==scheduleKey){scheduleKey=key;schedule=buildSchedule(nowMs);renderGuide();}}
@@ -68,6 +68,6 @@
     if(!navigator.share){try{await navigator.clipboard.writeText(share.url);els.shareStatus.textContent="Link copied. Open Android Share to earn 1/10 StarCoin.";}catch(_){els.shareStatus.textContent="Sharing is unavailable in this browser.";}return;}
     try{await navigator.share(share);const result=localShareCredit(share.url);els.shareStatus.textContent=result.awarded?"Shared · 1 StarCoin completed!":`Shared · StarCoin progress ${result.progressToNextCoin}/10`;}catch(error){if(!error||error.name!=="AbortError")els.shareStatus.textContent="Share did not complete.";}
   }
-  window.onYouTubeIframeAPIReady=function(){player=new YT.Player("player",{width:"100%",height:"100%",playerVars:{playsinline:1,controls:1,enablejsapi:1,autoplay:0,origin:location.origin,widget_referrer:location.href},events:{onReady:()=>{playerReady=true;try{player.unMute();player.setVolume(100);}catch(_){}if(entered){loadedKey="";tick();nudgePlayback();}},onStateChange:event=>{if(event.data===YT.PlayerState.PLAYING){startupPending=false;startupAttempts=0;clearStartupTimer();}},onError:()=>{if(loadedProgramVideoId)failedVideoIds.add(loadedProgramVideoId);startupPending=false;clearStartupTimer();scheduleKey="";loadedKey="";loadedProgramVideoId="";setTimeout(tick,150);}}});};
+  window.onYouTubeIframeAPIReady=function(){player=new YT.Player("player",{width:"100%",height:"100%",playerVars:{playsinline:1,controls:1,enablejsapi:1,autoplay:0,origin:location.origin,widget_referrer:location.href},events:{onReady:()=>{playerReady=true;try{player.unMute();player.setVolume(100);}catch(_){}if(entered){loadedKey="";tick();nudgePlayback();}},onStateChange:event=>{if(event.data===YT.PlayerState.PLAYING){startupPending=false;startupAttempts=0;clearStartupTimer();}else if(event.data===YT.PlayerState.ENDED&&entered){try{player.seekTo(0,true);player.playVideo();}catch(_){}}},onError:()=>{if(loadedProgramVideoId)failedVideoIds.add(loadedProgramVideoId);startupPending=false;clearStartupTimer();scheduleKey="";loadedKey="";loadedProgramVideoId="";setTimeout(tick,150);}}});};
   els.enter.addEventListener("click",enterStation);els.startOver.addEventListener("click",startOver);els.rewind.addEventListener("click",rewind);els.live.addEventListener("click",joinLive);els.share.addEventListener("click",shareChannel);ensureSchedule(Date.now());tick();loadYouTubeApi();setInterval(tick,1000);
 })();
