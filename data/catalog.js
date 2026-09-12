@@ -1,115 +1,27 @@
-// FOX through-the-years programming catalog.
-// The live guide spans the network's launch era through current FOX programming.
-// Inline playback is used when a stable public YouTube source is available; otherwise the slot links to an official/current streaming page when possible.
+// FOX full-episode catalog.
+// Only long-form complete episodes are eligible for airtime. Promos, first looks,
+// highlight reels, best-moment compilations and age-restricted movies are excluded.
 window.FOX_PROGRAMS={
-  traceySimpsons:{id:"FOX-1987-SHORTS",title:"The Simpsons — Tracey Ullman Shorts",year:1987,era:"1987–1989",collection:"FOX Origins · Animation",runtimeSeconds:3600,videoId:"Ufx0tioBw1w",cleared:true,watchUrl:"https://www.fox.com/detail/series/SER000852IRHK/the-simpsons"},
-  married:{id:"FOX-MWC",title:"Married... with Children",year:1987,era:"Launch Era",collection:"FOX Originals · Sitcom",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:"https://www.sonypictures.com/tv/marriedwithchildren"},
-  jumpStreet:{id:"FOX-21JS",title:"21 Jump Street",year:1987,era:"Launch Era",collection:"FOX Originals · Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:""},
-  livingColor:{id:"FOX-ILC",title:"In Living Color",year:1990,era:"Early FOX",collection:"Sketch Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  getALife:{id:"FOX-GAL",title:"Get a Life — Chris Elliott",year:1990,era:"Early FOX",collection:"Cult FOX Comedy",runtimeSeconds:1500,videoId:"EPcSzW2Aans",cleared:true,watchUrl:""},
-  hermansHead:{id:"FOX-HH",title:"Herman's Head",year:1991,era:"Early FOX",collection:"Cult FOX Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  martin:{id:"FOX-MARTIN",title:"Martin",year:1992,era:"1990s FOX",collection:"FOX Sitcom",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  xfiles:{id:"FOX-XF",title:"The X-Files",year:1993,era:"1990s FOX",collection:"Science Fiction · Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:""},
-  livingSingle:{id:"FOX-LS",title:"Living Single",year:1993,era:"1990s FOX",collection:"FOX Sitcom",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  kingHill:{id:"FOX-KOTH",title:"King of the Hill — Best Moments",year:1997,era:"Animation Domination Roots",collection:"FOX Animation",runtimeSeconds:1500,videoId:"uvrGYuqgyfQ",cleared:true,watchUrl:""},
-  kingHillPremiere:{id:"FOX-KOTH-P",title:"King of the Hill — FOX Premiere Night",year:1997,era:"Animation Domination Roots",collection:"FOX Archive · Promos",runtimeSeconds:300,videoId:"w6p0vq-3OvQ",cleared:true,watchUrl:""},
-  futurama:{id:"FOX-FUT",title:"Futurama",year:1999,era:"Late 1990s FOX",collection:"FOX Animation",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  familyGuy:{id:"FOX-FG",title:"Family Guy",year:1999,era:"Animation Domination",collection:"FOX Animation",runtimeSeconds:1800,videoId:"sZH375MVv-c",cleared:true,watchUrl:"https://www.fox.com/detail/series/SER000854XOPZ/family-guy/season-23/source%3Dgoogle-watch-feed"},
-  malcolm:{id:"FOX-MITM",title:"Malcolm in the Middle",year:2000,era:"2000s FOX",collection:"FOX Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:"https://www.disneyplus.com/browse/entity-ca1ac46e-9883-4125-a6e8-97efce9a2bf5"},
-  twentyFour:{id:"FOX-24",title:"24",year:2001,era:"2000s FOX",collection:"FOX Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:""},
-  arrested:{id:"FOX-AD",title:"Arrested Development",year:2003,era:"2000s FOX",collection:"FOX Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  house:{id:"FOX-HOUSE",title:"House",year:2004,era:"2000s FOX",collection:"FOX Medical Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:""},
-  bones:{id:"FOX-BONES",title:"Bones",year:2005,era:"2000s FOX",collection:"FOX Crime Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:""},
-  hellsKitchen:{id:"FOX-HK",title:"Hell's Kitchen",year:2005,era:"Reality Era",collection:"FOX Reality · Gordon Ramsay",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000853WTMX/hell-s-kitchen"},
-  glee:{id:"FOX-GLEE",title:"Glee",year:2009,era:"2010s FOX",collection:"FOX Musical Comedy-Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:""},
-  bobs:{id:"FOX-BOBS",title:"Bob's Burgers",year:2011,era:"Animation Domination",collection:"FOX Animation",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000856DLJP/bob-s-burgers"},
-  newGirl:{id:"FOX-NG",title:"New Girl",year:2011,era:"2010s FOX",collection:"FOX Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  masterChef:{id:"FOX-MC",title:"MasterChef",year:2010,era:"Reality Era",collection:"FOX Competition",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000855CUUA/masterchef"},
-  brooklyn99:{id:"FOX-B99",title:"Brooklyn Nine-Nine — FOX Years",year:2013,era:"2010s FOX",collection:"FOX Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  empire:{id:"FOX-EMP",title:"Empire",year:2015,era:"2010s FOX",collection:"FOX Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:""},
-  lastMan:{id:"FOX-LMOE",title:"The Last Man on Earth",year:2015,era:"2010s FOX",collection:"FOX Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:""},
-  loneStar:{id:"FOX-911LS",title:"9-1-1: Lone Star — FOX Years",year:2020,era:"2020s FOX",collection:"FOX Action Drama",runtimeSeconds:3600,videoId:"TFLbHqK8AN8",cleared:true,watchUrl:""},
-  loneStarFirst:{id:"FOX-911LS2",title:"9-1-1: Lone Star — First Look",year:2024,era:"2020s FOX",collection:"FOX Action Drama",runtimeSeconds:900,videoId:"rfwjiRxLrAw",cleared:true,watchUrl:""},
-  masked:{id:"FOX-MASK",title:"The Masked Singer",year:2019,era:"Current FOX",collection:"FOX Competition",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000878XWTP/the-masked-singer"},
-  animalControl:{id:"FOX-AC",title:"Animal Control",year:2023,era:"Current FOX",collection:"FOX Comedy",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER002759ZZTO/animal-control"},
-  floor:{id:"FOX-FLOOR",title:"The Floor",year:2024,era:"Current FOX",collection:"FOX Game Show",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER002989TGTE/the-floor"},
-  simpsonsCurrent:{id:"FOX-SIMP37",title:"The Simpsons — Season 37",year:2026,era:"Current FOX",collection:"Animation Domination · Current",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000852IRHK/the-simpsons/season-37"},
-  simpsonsCurrentA:{id:"FOX-SIMP37A",title:"The Simpsons — Thrifty Ways to Thieve Your Mother",year:2025,era:"Current FOX",collection:"Animation Domination · Season 37",runtimeSeconds:1260,videoId:"",cleared:false,watchUrl:"https://www.fox.com/watch/episode/fmc-kjn5bhpsakbpomj6/thrifty-ways-to-thieve-your-mother"},
-  simpsonsCurrentB:{id:"FOX-SIMP37B",title:"The Simpsons — Guess Who's Coming to Skinner",year:2025,era:"Current FOX",collection:"Animation Domination · Season 37",runtimeSeconds:1260,videoId:"",cleared:false,watchUrl:"https://www.fox.com/watch/episode/fmc-xbw776sr3l52me48/guess-who-s-coming-to-skinner"},
-  familyGuyCurrent:{id:"FOX-FG24",title:"Family Guy — Season 24",year:2026,era:"Current FOX",collection:"Animation Domination · Current",runtimeSeconds:1800,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000854XOPZ/family-guy/season-23/source%3Dgoogle-watch-feed"},
-  doc:{id:"FOX-DOC",title:"Doc",year:2025,era:"Current FOX",collection:"FOX Medical Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/shows-movies"},
-  bestMedicine:{id:"FOX-BM",title:"Best Medicine",year:2026,era:"Current FOX",collection:"FOX Comedy-Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/shows-movies"},
-  memoryKiller:{id:"FOX-MOK",title:"Memory of a Killer",year:2026,era:"Current FOX",collection:"FOX Drama",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/"},
-  beatShazam:{id:"FOX-BS",title:"Beat Shazam",year:2026,era:"Current FOX",collection:"FOX Music Game Show",runtimeSeconds:3600,videoId:"",cleared:false,watchUrl:"https://www.fox.com/detail/series/SER000912VCNY/beat-shazam"}
+  hkVegas:{id:"FOX-HK-S19E1",title:"Hell's Kitchen — Welcome to Vegas",year:2021,era:"FOX Reality",collection:"Hell's Kitchen · Full Episode",runtimeSeconds:2545,videoId:"KAWvDsghyc8",cleared:true,watchUrl:"https://www.youtube.com/watch?v=KAWvDsghyc8"},
+  hkBreakfast:{id:"FOX-HK-S21E5",title:"Hell's Kitchen — Breakfast 911",year:2022,era:"FOX Reality",collection:"Hell's Kitchen · Full Episode",runtimeSeconds:2445,videoId:"2D8KCV70nHI",cleared:true,watchUrl:"https://www.youtube.com/watch?v=2D8KCV70nHI"},
+  hkWedding:{id:"FOX-HK-S21E6",title:"Hell's Kitchen — Til Chef Do Us Part",year:2022,era:"FOX Reality",collection:"Hell's Kitchen · Full Episode",runtimeSeconds:2441,videoId:"ZIDcNhBbN4w",cleared:true,watchUrl:"https://www.youtube.com/watch?v=ZIDcNhBbN4w"},
+  knSandwich:{id:"FOX-KN-SANDWICH",title:"Kitchen Nightmares — Powdered Sugar Sandwich",year:2011,era:"FOX Reality",collection:"Kitchen Nightmares · Full Episode",runtimeSeconds:2438,videoId:"TWP0YpfvGvM",cleared:true,watchUrl:"https://www.youtube.com/watch?v=TWP0YpfvGvM"},
+  knHarryPotter:{id:"FOX-KN-HARRY",title:"Kitchen Nightmares — Something Out of Harry Potter",year:2012,era:"FOX Reality",collection:"Kitchen Nightmares · Full Episode",runtimeSeconds:2438,videoId:"Ya74LVYel1I",cleared:true,watchUrl:"https://www.youtube.com/watch?v=Ya74LVYel1I"},
+  knGreenBurger:{id:"FOX-KN-GREEN",title:"Kitchen Nightmares — Green Burgers",year:2013,era:"FOX Reality",collection:"Kitchen Nightmares · Full Episode",runtimeSeconds:2617,videoId:"Lu2tAefNvC0",cleared:true,watchUrl:"https://www.youtube.com/watch?v=Lu2tAefNvC0"},
+  knLettuce:{id:"FOX-KN-LETTUCE",title:"Kitchen Nightmares — The Infamous Grilled Lettuce",year:2011,era:"FOX Reality",collection:"Kitchen Nightmares · Full Episode",runtimeSeconds:2472,videoId:"27is5tVlBHI",cleared:true,watchUrl:"https://www.youtube.com/watch?v=27is5tVlBHI"},
+  knOctopus:{id:"FOX-KN-OCTOPUS",title:"Kitchen Nightmares — Octopus Tastes Like Hubba Bubba",year:2012,era:"FOX Reality",collection:"Kitchen Nightmares · Full Episode",runtimeSeconds:2465,videoId:"Seop9juFYYA",cleared:true,watchUrl:"https://www.youtube.com/watch?v=Seop9juFYYA"},
+  knLaughing:{id:"FOX-KN-LAUGH",title:"Kitchen Nightmares — Gordon Can't Stop Laughing",year:2010,era:"FOX Reality",collection:"Kitchen Nightmares · Full Episode",runtimeSeconds:2441,videoId:"VPMxB7N2Znc",cleared:true,watchUrl:"https://www.youtube.com/watch?v=VPMxB7N2Znc"},
+  knAmys:{id:"FOX-KN-AMYS",title:"Kitchen Nightmares — Amy's Baking Company",year:2013,era:"FOX Reality",collection:"Kitchen Nightmares · Full Episode",runtimeSeconds:2473,videoId:"FlYPkLRHeD4",cleared:true,watchUrl:"https://www.youtube.com/watch?v=FlYPkLRHeD4"},
+  jumpPilot:{id:"FOX-21JS-PILOT",title:"21 Jump Street — Pilot, Part 1",year:1987,era:"FOX Launch Era",collection:"21 Jump Street · Full Episode",runtimeSeconds:2800,videoId:"v51HzZFP_Yc",cleared:true,watchUrl:"https://www.youtube.com/watch?v=v51HzZFP_Yc"},
+  jumpLowAway:{id:"FOX-21JS-S1E11",title:"21 Jump Street — Low and Away",year:1987,era:"FOX Launch Era",collection:"21 Jump Street · Full Episode",runtimeSeconds:2836,videoId:"w9gDQsr-kTU",cleared:true,watchUrl:"https://www.youtube.com/watch?v=w9gDQsr-kTU"}
 };
-
-// Every historical listing gets a real destination even when no lawful inline
-// embed is available. Current titles open their specific FOX page above; older
-// titles fall back to the FOX network catalog instead of becoming dead cards.
-window.FOX_SOURCE_FALLBACK="https://www.fox.com/hub/network/NWK-094354f7eaa55a5fb570aa8bdf1e1839/fox";
-Object.values(window.FOX_PROGRAMS).forEach(function(program){
-  if(!program.watchUrl) program.watchUrl=window.FOX_SOURCE_FALLBACK;
-});
-
-// Every viewer gets a stable lineup for their local calendar day. At local midnight a fresh deterministic mix is selected.
-// Vintage Simpsons is deliberately followed by a current-era Simpsons slot in four different parts of the day.
-window.FOX_DAY_TEMPLATE=[
-  {minute:0,duration:60,choices:["xfiles","twentyFour","house","bones"]},
-  {minute:60,duration:60,choices:["loneStar","empire","house","bones"]},
-  {minute:120,duration:30,choices:["getALife","hermansHead"]},
-  {minute:150,duration:30,choices:["martin","livingSingle","livingColor"]},
-  {minute:180,duration:30,choices:["married","getALife","hermansHead"]},
-  {minute:210,duration:30,choices:["livingColor","martin","livingSingle"]},
-  {minute:240,duration:30,choices:["kingHill","futurama"]},
-  {minute:270,duration:30,choices:["traceySimpsons"]},
-  {minute:300,duration:30,choices:["simpsonsCurrent","simpsonsCurrentA","simpsonsCurrentB"]},
-  {minute:330,duration:30,choices:["familyGuy","bobs"]},
-  {minute:360,duration:60,choices:["hellsKitchen","masterChef"]},
-  {minute:420,duration:60,choices:["floor","masked","beatShazam"]},
-  {minute:480,duration:30,choices:["malcolm","arrested","newGirl"]},
-  {minute:510,duration:30,choices:["brooklyn99","lastMan","animalControl"]},
-  {minute:540,duration:30,choices:["hermansHead","getALife","married"]},
-  {minute:570,duration:30,choices:["traceySimpsons"]},
-  {minute:600,duration:30,choices:["simpsonsCurrentA","simpsonsCurrentB","simpsonsCurrent"]},
-  {minute:630,duration:30,choices:["familyGuyCurrent","bobs","kingHill"]},
-  {minute:660,duration:60,choices:["xfiles","loneStar","twentyFour"]},
-  {minute:720,duration:60,choices:["house","bones","glee","empire"]},
-  {minute:780,duration:60,choices:["floor","masked","beatShazam"]},
-  {minute:840,duration:30,choices:["livingColor","martin","livingSingle"]},
-  {minute:870,duration:30,choices:["getALife","hermansHead","married"]},
-  {minute:900,duration:30,choices:["traceySimpsons"]},
-  {minute:930,duration:30,choices:["simpsonsCurrent","simpsonsCurrentA","simpsonsCurrentB"]},
-  {minute:960,duration:30,choices:["familyGuyCurrent","bobs","animalControl"]},
-  {minute:990,duration:30,choices:["animalControl","newGirl","lastMan"]},
-  {minute:1020,duration:60,choices:["doc","bestMedicine","memoryKiller"]},
-  {minute:1080,duration:60,choices:["masterChef","hellsKitchen","floor"]},
-  {minute:1140,duration:30,choices:["traceySimpsons"]},
-  {minute:1170,duration:30,choices:["simpsonsCurrentA","simpsonsCurrentB","simpsonsCurrent"]},
-  {minute:1200,duration:60,choices:["masked","floor","beatShazam"]},
-  {minute:1260,duration:60,choices:["doc","loneStar","xfiles","twentyFour"]},
-  {minute:1320,duration:30,choices:["kingHill","familyGuy","bobs"]},
-  {minute:1350,duration:30,choices:["futurama","familyGuyCurrent","animalControl"]},
-  {minute:1380,duration:60,choices:["xfiles","house","bones","loneStar"]}
-];
-
-/*
- * Broadcast rule: only schedule sources that can play inside the channel.
- * Catalog-only titles remain available for future verified hookups, but never
- * occupy airtime or produce an empty player/source slate.
- */
-window.FOX_INLINE_KEYS=Object.keys(window.FOX_PROGRAMS).filter(function(key){
-  const item=window.FOX_PROGRAMS[key];
-  return key!=="bobs"&&!!(item.videoId&&item.cleared);
-});
-window.FOX_DAY_TEMPLATE=window.FOX_DAY_TEMPLATE.map(function(slot,index){
-  const verified=slot.choices.filter(function(key){return window.FOX_INLINE_KEYS.indexOf(key)!==-1;});
-  if(verified.length)return Object.assign({},slot,{choices:verified});
-  const first=(index*2)%window.FOX_INLINE_KEYS.length;
-  return Object.assign({},slot,{choices:[
-    window.FOX_INLINE_KEYS[first],
-    window.FOX_INLINE_KEYS[(first+1)%window.FOX_INLINE_KEYS.length],
-    window.FOX_INLINE_KEYS[(first+2)%window.FOX_INLINE_KEYS.length]
-  ]});
-});
-
-window.INFINITY_CHANNEL={id:"FOX",era:"1987 to now",reset:"12:00 AM viewer local time",feature:"Vintage Simpsons followed by current Simpsons"};
+window.FOX_INLINE_KEYS=Object.keys(window.FOX_PROGRAMS);
+const reality=["hkVegas","hkBreakfast","hkWedding","knSandwich","knHarryPotter","knGreenBurger","knLettuce","knOctopus","knLaughing","knAmys"];
+const classics=["jumpPilot","jumpLowAway"];
+window.FOX_DAY_TEMPLATE=[];
+for(let minute=0,index=0;minute<1440;index++){
+  const choices=index%4===0?classics:reality;
+  window.FOX_DAY_TEMPLATE.push({minute:minute,duration:60,choices:choices});
+  minute+=60;
+}
+window.INFINITY_CHANNEL={id:"FOX",era:"1987 to now",reset:"12:00 AM viewer local time",feature:"Verified complete FOX episodes only",playbackPolicy:"No promos, clips, highlight reels, R-rated movies or age-restricted sources"};
