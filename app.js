@@ -46,6 +46,7 @@
   }
   function tick(){
     const now=activeClockMs();ensureSchedule(now);const state=engine.resolve(now,schedule),liveSchedule=buildSchedule(Date.now()),liveState=engine.resolve(Date.now(),liveSchedule);
+    window.FOX_LIVE_CONTEXT={program:state.block.movie,stationSeconds:state.blockElapsed,mediaSeconds:state.mediaSeconds,playing:entered,mode:mode,sourceUrl:state.segment.watchUrl||state.block.movie.watchUrl||"",updatedAt:Date.now()};
     els.clock.textContent=`${formatStationTime(Date.now())} local`;els.mode.textContent=mode==="live"?"LIVE FOX":"TIME SHIFTED";els.title.textContent=state.block.movie.title;setProgramArt(state.block.movie);els.programTime.textContent=`${formatStationTime(state.block.startsAtMs)}–${formatStationTime(state.block.endsAtMs)}`;
     els.position.textContent=mode==="live"?"Synced with the viewer’s local FOX channel clock":`${formatDuration(state.blockElapsed)} from start`;els.remaining.textContent=`${formatDuration(state.blockRemaining)} remaining in slot`;els.progress.style.width=`${Math.min(100,(state.blockElapsed/state.block.blockSeconds)*100)}%`;
     document.querySelectorAll(".guide-row").forEach(row=>row.classList.toggle("current",row.dataset.id===state.block.id));renderNext(liveState.block);loadMedia(state);
