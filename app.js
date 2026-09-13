@@ -25,7 +25,11 @@
     els.guideDate.textContent=new Intl.DateTimeFormat("en-US",{timeZone:engine.TIME_ZONE,weekday:"long",month:"long",day:"numeric"}).format(new Date(schedule[0].startsAtMs));
     els.guide.innerHTML=schedule.map(item=>`<article class="guide-row" data-id="${item.id}"><time>${formatStationTime(item.startsAtMs)}</time><div><strong>${item.movie.title}</strong><small>${item.movie.era||"FOX"}</small></div><span>${item.movie.year} · ${item.movie.collection}</span></article>`).join("");
   }
+  let renderedNextBlockKey = "";
   function renderNext(currentBlock){
+    const nextBlockKey = currentBlock ? String(currentBlock.id || currentBlock.startsAtMs || "") + ":" + String((currentBlock.movie && currentBlock.movie.videoId) || (currentBlock.program && currentBlock.program.videoId) || "") : "";
+    if (nextBlockKey && nextBlockKey === renderedNextBlockKey) return;
+    renderedNextBlockKey = nextBlockKey;
     const currentIndex=schedule.findIndex(item=>item.id===currentBlock.id);
     els.next.innerHTML=[1,2,3].map(step=>{const item=schedule[Math.min(schedule.length-1,currentIndex+step)],art=artFor(item.movie).replace(/"/g,"%22");return `<article class="next-card" style="--card-hue:${programHue(item.movie)};--card-art:url('${art}')"><time>${formatStationTime(item.startsAtMs)}</time><div><small>${item.movie.era||"FOX"}</small><h3>${item.movie.title}</h3><p>${item.movie.collection}</p></div></article>`;}).join("");
   }
